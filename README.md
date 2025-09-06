@@ -173,8 +173,8 @@ The application uses a sophisticated coroutine-based generator that:
 │   (findword)    │    │  Generation      │    │   Dictionary   │
 │                 │    │  (Coroutines)    │    │   Validation   │
 └─────────────────┘    └──────────────────┘    └────────────────┘
-         │                        │                       │
-         │                        ▼                       │
+         │                        │                        │
+         │                        ▼                        │
          │              ┌──────────────────┐               │
          │              │ permutated_words │               │
          │              │      .txt        │               │
