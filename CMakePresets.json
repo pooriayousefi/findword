@@ -3,8 +3,8 @@
   "configurePresets": [
     {
       "name": "default",
-      "displayName": "Default Config",
-      "description": "Default build using Ninja generator",
+      "displayName": "Default Configuration",
+      "description": "Cross-platform build using Ninja",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/${presetName}",
       "cacheVariables": {
@@ -14,7 +14,7 @@
     },
     {
       "name": "debug",
-      "displayName": "Debug Config",
+      "displayName": "Debug Configuration",
       "description": "Debug build with sanitizers",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/${presetName}",
@@ -24,20 +24,9 @@
       }
     },
     {
-      "name": "release",
-      "displayName": "Release Config",
-      "description": "Optimized release build",
-      "generator": "Ninja",
-      "binaryDir": "${sourceDir}/build/${presetName}",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
-      }
-    },
-    {
       "name": "windows",
-      "displayName": "Windows Config",
-      "description": "Windows build using Visual Studio",
+      "displayName": "Windows Configuration",
+      "description": "Windows build with Visual Studio",
       "generator": "Visual Studio 17 2022",
       "binaryDir": "${sourceDir}/build/${presetName}",
       "condition": {
@@ -51,7 +40,7 @@
     },
     {
       "name": "macos",
-      "displayName": "macOS Config",
+      "displayName": "macOS Configuration",
       "description": "macOS build with Xcode",
       "generator": "Xcode",
       "binaryDir": "${sourceDir}/build/${presetName}",
@@ -75,32 +64,12 @@
       "configurePreset": "debug"
     },
     {
-      "name": "release",
-      "configurePreset": "release"
-    },
-    {
       "name": "windows",
       "configurePreset": "windows"
     },
     {
       "name": "macos",
       "configurePreset": "macos"
-    }
-  ],
-  "testPresets": [
-    {
-      "name": "default",
-      "configurePreset": "default",
-      "output": {
-        "outputOnFailure": true
-      }
-    },
-    {
-      "name": "debug",
-      "configurePreset": "debug",
-      "output": {
-        "outputOnFailure": true
-      }
     }
   ]
 }
