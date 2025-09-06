@@ -1,0 +1,81 @@
+# Build artifacts
+build/
+out/
+bin/
+lib/
+dist/
+
+# IDE files
+.vscode/
+.vs/
+*.vcxproj*
+*.sln
+*.user
+.idea/
+*.iml
+
+# Compiler and linker files
+*.obj
+*.o
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+*.pdb
+*.ilk
+*.exp
+*.lib
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+!*.cmake.in
+!CMakePresets.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+
+# Generated files
+permutated_words.txt
+*.tmp
+*.temp
+*.log
+
+# Package managers
+vcpkg_installed/
+conan/
+node_modules/
+
+# Platform specific
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Backup files
+*~
+*.bak
+*.swp
+*.swo
+
+# Archive files
+*.zip
+*.tar.gz
+*.7z
+*.rar

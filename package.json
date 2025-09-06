@@ -1,0 +1,42 @@
+{
+  "name": "findword",
+  "version": "1.0.0",
+  "description": "High-performance word permutation generator with modern C++",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pooriayousefi/findword.git"
+  },
+  "homepage": "https://github.com/pooriayousefi/findword",
+  "author": "Pooria Yousefi",
+  "license": "MIT",
+  "keywords": [
+    "cpp",
+    "c++23",
+    "coroutines",
+    "permutations",
+    "dictionary",
+    "word-finder",
+    "algorithms"
+  ],
+  "scripts": {
+    "build": "cmake --preset=default && cmake --build build/default",
+    "build:debug": "cmake --preset=debug && cmake --build build/debug",
+    "build:release": "cmake --preset=release && cmake --build build/release",
+    "test": "python test_runner.py",
+    "setup": "python -m venv venv && venv/bin/pip install -r requirements.txt.in",
+    "setup:windows": "python -m venv venv && venv\\Scripts\\pip install -r requirements.txt.in",
+    "clean": "rm -rf build/ venv/ *.txt",
+    "package": "cmake --build build/release --target package"
+  },
+  "engines": {
+    "cmake": ">=3.20",
+    "python": ">=3.8"
+  },
+  "dependencies": {
+    "pyspellchecker": ">=0.7.0"
+  },
+  "devDependencies": {
+    "cmake": ">=3.20",
+    "ninja": "*"
+  }
+}

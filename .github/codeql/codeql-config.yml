@@ -1,0 +1,23 @@
+name: "FindWord CodeQL Configuration"
+
+disable-default-queries: false
+
+queries:
+  - uses: security-and-quality
+
+paths:
+  - "findword.cpp"
+  - "findword.py"
+  - "tests/"
+
+paths-ignore:
+  - "build/"
+  - "venv/"
+  - "env/"
+  - "*.txt"
+
+query-filters:
+  - exclude:
+      id: cpp/unused-local-variable
+  - exclude:
+      id: py/unused-import
